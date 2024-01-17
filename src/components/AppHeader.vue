@@ -12,8 +12,9 @@ export default {
 </script>
 
 <template lang="">
-    <div class="container-lg">
-        <div class="row bg-danger p-2">
+    <div class="bg-danger">
+    <div class="container-lg ">
+        <div class="row  p-2">
             <div class="col-6"> 
                 <span class="news-up px-3">NEWS UPDATES</span>
                 <span class="news p-1">0:37</span>
@@ -44,6 +45,43 @@ export default {
             </div>
         </div>
     </div>
+</div>
+    <div class="container-lg">
+        <div class="row p-3">
+            <div class="col-4 "> 
+                <img src="../assets/anime-logo-300x89.webp" alt="">
+             </div>
+                <div class="col-8 d-flex justify-content-end">
+                    <img src="../assets/header-banner.webp" alt="">
+              
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="container-lg">
+        <div class="row">
+        <div class="col-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+</svg>
+        </div>
+        <div class="col-8">
+            <ul class="d-flex justify-content-around list">
+                <li>HOME</li>
+                <li>ABOUT US</li>
+                <li>LIFESTYLE</li>
+                <li>STORIES</li>
+                <li>PAGES</li>
+                <li>CONTACT US</li>
+
+            </ul>
+        </div>
+        <div class="col-2 d-flex justify-content-end">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+  <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+</svg>
+        </div>
+    </div></div>
 </template>
 
 <style lang="scss" scoped>
@@ -66,5 +104,9 @@ export default {
 
     .social{
         color: white;
+    }
+
+    .list{
+        list-style: none;
     }
 </style>
