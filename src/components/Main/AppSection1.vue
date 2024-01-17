@@ -32,7 +32,7 @@ export default {
         <div class="container-fluid position-relative">
 
             <!-- Carousell -->
-            <Carousel ref="carousel" :items-to-show="4" :items-to-scroll="1" snapAlign="start" :autoplay="2000" :wrap-around="true" :pauseAutoplayOnHover="true">
+            <Carousel ref="carousel" :items-to-show="4" :items-to-scroll="1" snapAlign="start" :autoplay="5000" :wrap-around="true" :pauseAutoplayOnHover="true">
                 <Slide v-for="slide in store.animeList" :key="slide">
 
                     <!-- Card -->
@@ -53,8 +53,7 @@ export default {
             <button @click="next" class="carousel__next">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
                     class="bi bi-chevron-right" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd"
-                        d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
+                    <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
                 </svg>
             </button>
 
@@ -62,8 +61,7 @@ export default {
             <button class="carousel__prev" @click="prev">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
                     class="bi bi-chevron-left" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd"
-                        d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
+                    <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
                 </svg>
             </button>
         </div>
