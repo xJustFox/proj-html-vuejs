@@ -12,27 +12,31 @@ export default {
 </script>
 
 <template lang="">
-    <div class="ultracontainer">
-        <div class="justify-content-center d-flex">
+    <div class="ultracontainer pb-4">
+        <div class="justify-content-center d-flex mb-4">
             <div class="triangolo"></div>
         </div>
         
         <div class="container">
             <div class="row">
                 <div class="col-md-4 d-flex">
-                    <div class="col-md-6">
-                        <p>Contenuto della prima colonna</p>
-                    </div>
-                    <div class="col-md-6">
-                        <p>Contenuto della seconda colonna</p>
+                    <div class="col-md-6" v-for="(section, index) in store.footerData.slice(0, 2)" :key="index">
+                        <h4>{{ section.title }}</h4>
+                        <ul>
+                            <li v-for="(link, linkIndex) in section.links" :key="linkIndex">
+                            <a :href="link.path">{{ link.text }}</a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
                 <div class="col-md-4 d-flex">
-                    <div class="col-md-6">
-                        <p>Contenuto della prima colonna</p>
-                        </div>
-                    <div class="col-md-6">
-                        <p>Contenuto della seconda colonna</p>
+                    <div class="col-md-6" v-for="(section, index) in store.footerData.slice(2, 4)" :key="index">
+                        <h4>{{ section.title }}</h4>
+                        <ul>
+                            <li v-for="(link, linkIndex) in section.links" :key="linkIndex">
+                            <a :href="link.path">{{ link.text }}</a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
                 <div class="col-md-4 text-center">
@@ -51,7 +55,6 @@ export default {
     }
 
     .ultracontainer{
-        height: 500px;
         background-color: $my_red;
         border-top: 10px solid $my_black;
     }
@@ -62,5 +65,10 @@ export default {
         border-left: 15px solid transparent;
         border-top: 15px solid $my_black;
         border-right: 15px solid transparent;
+    }
+
+    ul{
+        list-style: none;
+        padding-left: 0;
     }
 </style>
