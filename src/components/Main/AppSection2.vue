@@ -1,12 +1,31 @@
 <script>
 import { store } from '../../store'
+import { Carousel, Navigation, Pagination, Slide } from 'vue3-carousel'
+import 'vue3-carousel/dist/carousel.css'
+// import { ref } from 'vue'
+// const myCarousel = ref(null)
 export default {
     name: 'AppSection2',
+    components: {
+        Carousel,
+        Slide,
+        Pagination,
+        Navigation,
+    },
     data() {
         return {
             store,
         }
     },
+    methods: {
+
+        next() {
+            this.$refs.myCarousel.next()
+        },
+        prev() {
+            this.$refs.myCarousel.prev()
+        }
+    }
 }
 </script>
 
@@ -14,7 +33,7 @@ export default {
     <div class="container-lg mt-2 mb-5">
         <div class="row">
             <div class="col-12 text-uppercase d-flex justify-content-between mb-4">
-                <h4>lifestyle & stories</h4>
+                <h4 class="fw-bold">lifestyle & stories</h4>
                 <div class="d-flex">
                     <button class="btn grey_buttons">all</button>
                     <button class="btn grey_buttons">lifestyle</button>
@@ -101,7 +120,7 @@ export default {
             </div>
         </div>
     </div>
-    <div class="banner-container">
+    <div class="banner-container mb-4">
         <div class="container-lg">
             <div class="row">
                 <div class="col-12">
@@ -110,9 +129,37 @@ export default {
             </div>
         </div>
     </div>
-    <div class="container-lg">
+    <div class="container-lg mb-4">
         <div class="row">
-            <div class="col-12"></div>
+            <div class="col-12 d-flex align-items-center justify-content-between">
+                <h4 class="text-uppercase fw-bold my-3">featured posts</h4>
+                <div class="buttons_">
+                    <button class="btn_carousel" @click="prev">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0"/>
+                        </svg>
+                    </button>
+                    <button class="btn_carousel ms-3" @click="next">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="col-12">
+                <Carousel ref="myCarousel" :autoplay="3000" :itemsToShow="3" :items-to-scroll="1" :wrap-around="true" :pauseAutoplayOnHover="true">
+                    <Slide v-for="slide in store.animeList" :key="slide">
+                        <div class="card_ carousel__item">
+                            <img :src="slide.img" alt="">
+                            <h6 class="fw-bold">{{slide.title}}</h6>
+                            <span>{{slide.date}}</span>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque, doloremque. Vero, honoris...</p>
+                            <span class="text-capitalize fw-bold label_">read more</span>
+                        </div>
+                    </Slide>
+
+                </Carousel>
+            </div>
         </div>
     </div>
 </template>
@@ -188,11 +235,53 @@ h4 {
 }
 
 .banner-container {
-    background-color: lightgrey;
+    background-color: $my_lightgray;
 
     img {
         margin: 30px 0px;
         width: 100%;
+    }
+}
+
+.btn_carousel {
+    border-radius: 50%;
+    background-color: $my_black;
+    color: $my_white;
+    padding: 5px;
+    border: none;
+
+}
+
+.card_ {
+    width: 390px;
+    background-color: $my_lightgray;
+    border-radius: 5px;
+
+    img {
+        width: 100%;
+        margin-bottom: 30px;
+        border-radius: 5px 5px 0px 0px;
+
+    }
+
+    h6 {
+        margin: 0;
+    }
+
+    p {
+        margin: 10px 0px;
+        padding: 0px 25px;
+        font-size: 14px;
+    }
+
+    .label_ {
+        display: inline-block;
+        background-color: $my_red;
+        color: $my_white;
+        border-radius: 30px;
+        padding: 7px 40px;
+        margin-bottom: 25px;
+        cursor: pointer;
     }
 }
 </style>
