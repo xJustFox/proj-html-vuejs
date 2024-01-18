@@ -18,9 +18,9 @@ export default {
             <div class="col-6"> 
                 <span class="news-up px-3">NEWS UPDATES</span>
                 <span class="news p-1">0:37</span>
-                <span class="news p-1">THE BEST HEALTHY FOOD</span>
+                <span class="news p-1 X">THE BEST HEALTHY FOOD</span>
             </div>
-            <div class="col-4 d-flex justify-content-end">
+            <div class="col-4 d-flex justify-content-end social">
                 <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-chevron-left svg" viewBox="0 0 16 16">
   <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0"/>
 </svg>
@@ -60,26 +60,36 @@ export default {
     <hr>
     <div class="container-lg">
         <div class="row">
-        <div class="col-2">
-            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
-  <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
-</svg>
+        <div class="col-2 ">
+            <i class="fa-solid fa-bars fa-2xl"></i>
         </div>
         <div class="col-8">
             <ul class="d-flex justify-content-around list">
-                <li>HOME</li>
-                <li>ABOUT US</li>
-                <li>LIFESTYLE</li>
-                <li>STORIES</li>
-                <li>PAGES</li>
-                <li>CONTACT US</li>
+                <li> <i class="fa-solid fa-house-chimney "></i> HOME</li>
+                <li> <i class="fa-solid fa-user"></i> ABOUT US</li>
+                <li> <i class="fa-solid fa-suitcase"></i> LIFESTYLE</li>
+                <li> <i class="fa-solid fa-book-open-reader"></i> STORIES</li>
+                <li><div class="dropdown">
+  <button class=" dropdown-toggle list" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    <i class="fa-solid fa-book"></i> PAGES
+  </button>
+  <ul class="dropdown-menu">
+    <li><button class="dropdown-item" type="button">SEARCH RESULT</button></li>
+    <li><button class="dropdown-item" type="button">CATEGORY ARCHIVE</button></li>
+    <li><button class="dropdown-item" type="button">AUTHOR ARCHIVE</button></li>
+    <li><button class="dropdown-item" type="button">DATE ARCHIVE</button></li>
+    <li><button class="dropdown-item" type="button">ERRORE 404</button></li>
+
+  </ul>
+</div>  </li>
+            
+                <li> <i class="fa-solid fa-envelope"></i> CONTACT US</li>
 
             </ul>
+       
         </div>
-        <div class="col-2 d-flex justify-content-end">
-            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-  <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
-</svg>
+        <div class="col-2 d-flex justify-content-end pt-3">
+            <i class="fa-solid fa-magnifying-glass fa-2xl"></i>
         </div>
     </div></div>
 </template>
@@ -104,9 +114,36 @@ export default {
 
     .social{
         color: white;
+        
+    }
+
+    .social:hover{
+        color: rgba(0, 0, 0, 0.666);
+    font-weight: bold; 
+    cursor: pointer;
     }
 
     .list{
         list-style: none;
-    }
+        color: rgba(0, 0, 0, 0.666);
+    font-weight: bold; 
+    cursor: pointer;
+    border: none;
+    background-color: white;
+
+}
+    
+
+    .news.p-1.X:hover {
+    color: rgba(0, 0, 0, 0.666);
+    font-weight: bold; 
+    cursor: pointer;}
+    .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+
+        .dropdown-menu {
+            display: none;
+        }
+        
 </style>
