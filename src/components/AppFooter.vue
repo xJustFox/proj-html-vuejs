@@ -19,11 +19,21 @@ export default {
         
         <div class="container">
             <div class="row">
-                <div class="col-md-4 text-center">
-                    <p>Prima colonna</p>
+                <div class="col-md-4 d-flex">
+                    <div class="col-md-6">
+                        <p>Contenuto della prima colonna</p>
+                    </div>
+                    <div class="col-md-6">
+                        <p>Contenuto della seconda colonna</p>
+                    </div>
                 </div>
-                <div class="col-md-4 text-center">
-                    <p>Seconda colonna</p>
+                <div class="col-md-4 d-flex">
+                    <div class="col-md-6">
+                        <p>Contenuto della prima colonna</p>
+                        </div>
+                    <div class="col-md-6">
+                        <p>Contenuto della seconda colonna</p>
+                    </div>
                 </div>
                 <div class="col-md-4 text-center">
                     <p>Terza colonna</p>
@@ -35,6 +45,10 @@ export default {
 
 <style lang="scss" scoped>
     @import '../style/partials/variables';
+
+    *{
+        color: $my_white;
+    }
 
     .ultracontainer{
         height: 500px;
