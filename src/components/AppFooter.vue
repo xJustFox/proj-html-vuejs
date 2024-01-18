@@ -12,11 +12,29 @@ export default {
 </script>
 
 <template lang="">
-    <div>
-        
+    <div class="ultracontainer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 text-center">
+                    <p>Prima colonna</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <p>Seconda colonna</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <p>Terza colonna</p>
+                </div>
+            </div>
+        </div>
     </div>
 </template>
 
 <style lang="scss" scoped>
-    
+    @import '../style/partials/variables';
+
+    .ultracontainer{
+        height: 500px;
+        background-color: $my_red;
+        border-top: 10px solid $my_black;
+    }
 </style>
