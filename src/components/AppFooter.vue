@@ -21,28 +21,34 @@ export default {
             <div class="row">
                 <div class="col-4 d-flex">
                     <div class="col-6" v-for="(section, index) in store.footerData.slice(0, 2)" :key="index">
-                        <h4>{{ section.title }}</h4>
-                        <ul>
-                            <li v-for="(link, linkIndex) in section.links" :key="linkIndex">
-                            <a :href="link.path">{{ link.text }}</a>
-                            </li>
-                        </ul>
+                        <div class="content">
+                            <h4>{{ section.title }}</h4>
+                            <ul>
+                                <li v-for="(link, linkIndex) in section.links" :key="linkIndex">
+                                <a :href="link.path">{{ link.text }}</a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 <div class="col-4 d-flex">
                     <div class="col-6" v-for="(section, index) in store.footerData.slice(2, 4)" :key="index">
-                        <h4>{{ section.title }}</h4>
-                        <ul>
-                            <li v-for="(link, linkIndex) in section.links" :key="linkIndex">
-                            <a :href="link.path">{{ link.text }}</a>
-                            </li>
-                        </ul>
+                        <div class="content">
+                            <h4>{{ section.title }}</h4>
+                            <ul>
+                                <li v-for="(link, linkIndex) in section.links" :key="linkIndex">
+                                <a :href="link.path">{{ link.text }}</a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 <div class="col-4">
-                    <h4>SUBCRIBE TO NEWSLETTER</h4>
-                    <input type="text" placeholder="Email" class="mb-2 input-subscribe w-100"><br>
-                    <button class="btn-subscribe w-100">SUBSCRIBE</button>
+                    <div class="content">
+                        <h4>SUBCRIBE TO NEWSLETTER</h4>
+                        <input type="text" placeholder="Email" class="mb-2 input-subscribe w-100"><br>
+                        <button class="btn-subscribe w-100">SUBSCRIBE</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -50,7 +56,20 @@ export default {
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <hr class="w-100">
+                    <div class="content">
+                        <hr class="w-100">
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="content">
+                        <img src="../assets/anime-whitelogo.png" alt="" class="logo">
+                    </div>
+                    
+                </div>
+                <div class="col-6">
+                    <div class="content justify-content-end h-100 align-content-center d-flex flex-wrap">
+                        © Anime Tech, Theme by HasnainDEV
+                    </div>
                 </div>
             </div>
         </div>
@@ -115,5 +134,13 @@ export default {
 
     hr{
         opacity: 1;
+    }
+
+    .logo{
+        width: 250px;
+    }
+
+    .text-right1{
+        text-align: end;
     }
 </style>

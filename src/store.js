@@ -95,8 +95,8 @@ footerData: [
           { text: 'Blog', path: 'https://www.google.it/' },
           { text: 'Brand Assets', path: 'https://www.google.it/' },
         ],
-      },
-      {
+    },
+    {
         title: 'FEATURES',
         links: [
           { text: 'Overview', path: 'https://www.google.it/' },
@@ -104,8 +104,8 @@ footerData: [
           { text: 'Code', path: 'https://www.google.it/' },
           { text: 'Collaborate', path: 'https://www.google.it/' },
         ],
-      },
-      {
+    },
+    {
         title: 'QUICK LINKS',
         links: [
           { text: 'Stories', path: 'https://www.google.it/' },
@@ -113,6 +113,6 @@ footerData: [
           { text: 'Blog', path: 'https://www.google.it/' },
           { text: 'Brand Assets', path: 'https://www.google.it/' },
         ],
-      },
-  ],
+    },
+],
 });
