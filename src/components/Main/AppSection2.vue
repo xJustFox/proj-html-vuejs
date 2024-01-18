@@ -35,15 +35,15 @@ export default {
             <div class="col-12 text-uppercase d-flex justify-content-between mb-4">
                 <h4 class="fw-bold">lifestyle & stories</h4>
                 <div class="d-flex">
-                    <button class="btn grey_buttons">all</button>
-                    <button class="btn grey_buttons">lifestyle</button>
-                    <button class="btn grey_buttons">stories</button>
+                    <button class="grey_buttons">all</button>
+                    <button class="grey_buttons">lifestyle</button>
+                    <button class="grey_buttons">stories</button>
                 </div>
             </div>
             <div class="col-7 text-black mb-3">
                 <div class="left_box">
                     <img :src="store.animeList[6].img" alt="" class="img_">
-                    <button class="my_button btn_left">{{store.animeList[6].genre[0]}}</button>
+                    <button class="my_button">{{store.animeList[6].genre[0]}}</button>
                     <div class="text_box text-white">
                         <div class="d-flex align-items-center">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
@@ -133,7 +133,7 @@ export default {
         <div class="row">
             <div class="col-12 d-flex align-items-center justify-content-between">
                 <h4 class="text-uppercase fw-bold my-3">featured posts</h4>
-                <div class="buttons_">
+                <div>
                     <button class="btn_carousel" @click="prev">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
                             <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0"/>
@@ -147,7 +147,7 @@ export default {
                 </div>
             </div>
             <div class="col-12">
-                <Carousel ref="myCarousel" :autoplay="3000" :itemsToShow="3" :items-to-scroll="1" :wrap-around="true" :pauseAutoplayOnHover="true">
+                <Carousel ref="myCarousel"  :itemsToShow="3" :items-to-scroll="1" :wrap-around="true" :pauseAutoplayOnHover="true">
                     <Slide v-for="slide in store.animeList" :key="slide">
                         <div class="card_ carousel__item">
                             <img :src="slide.img" alt="">
@@ -155,6 +155,9 @@ export default {
                             <span>{{slide.date}}</span>
                             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque, doloremque. Vero, honoris...</p>
                             <span class="text-capitalize fw-bold label_">read more</span>
+                            <div class="labels_">
+                                <button class="my_button mx-2" v-for="genre in slide.genre.slice(0,2)">{{genre}}</button>                                
+                            </div>
                         </div>
                     </Slide>
 
@@ -175,6 +178,8 @@ export default {
     padding-left: 20px;
     padding-right: 20px;
     font-size: 14px;
+    border: none;
+    border-radius: 5px;
 }
 
 h4 {
@@ -185,11 +190,15 @@ h4 {
 .my_button {
     position: absolute;
     background-color: $my_white;
-    padding: 0px 10px;
-    border: 1px solid $my_white;
+    padding: 2px 12px;
+    border: none;
     border-radius: 5px;
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 600;
+
+    &:hover {
+        color: $my_red;
+    }
 }
 
 .img_ {
@@ -206,15 +215,19 @@ h4 {
     position: relative;
 
 
-    .btn_left {
-        top: 10px;
-        left: 10px;
+    .my_button {
+        top: 15px;
+        left: 15px;
     }
 
     .text_box {
         position: absolute;
         bottom: 50px;
         left: 25px;
+    }
+
+    img:hover {
+        filter: brightness(70%);
     }
 }
 
@@ -230,6 +243,15 @@ h4 {
     .my_button {
         top: 10px;
         left: 10px;
+    }
+
+    span:hover,
+    p:hover {
+        color: $my_red;
+    }
+
+    img:hover {
+        filter: brightness(70%);
     }
 
 }
@@ -252,10 +274,16 @@ h4 {
 
 }
 
+.grey_buttons:hover,
+.btn_carousel:hover {
+    background-color: $my_red;
+}
+
 .card_ {
     width: 390px;
     background-color: $my_lightgray;
     border-radius: 5px;
+    position: relative;
 
     img {
         width: 100%;
@@ -274,6 +302,11 @@ h4 {
         font-size: 14px;
     }
 
+    h6:hover,
+    span:hover {
+        color: $my_red;
+    }
+
     .label_ {
         display: inline-block;
         background-color: $my_red;
@@ -282,6 +315,23 @@ h4 {
         padding: 7px 40px;
         margin-bottom: 25px;
         cursor: pointer;
+
+        &:hover {
+            background-color: $my_black;
+            color: $my_white;
+        }
+    }
+
+    .labels_ {
+        width: 100%;
+        top: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        position: absolute;
+
+        .my_button {
+            position: relative;
+        }
     }
 }
 </style>
