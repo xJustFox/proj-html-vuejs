@@ -1,7 +1,7 @@
 <script>
-import AppSection1 from './Main/AppSection-1.vue';
-import AppSection2 from './Main/AppSection-2.vue';
-import AppSection3 from './Main/AppSection-3.vue';
+import AppSection1 from './Main/AppSection1.vue';
+import AppSection2 from './Main/AppSection2.vue';
+import AppSection3 from './Main/AppSection3.vue';
 import { store } from '../store.js';
 
 export default {
@@ -25,6 +25,4 @@ export default {
     <AppSection3 />
 </template>
 
-<style lang="scss" scoped>
-    
-</style>
+<style lang="scss" scoped></style>
