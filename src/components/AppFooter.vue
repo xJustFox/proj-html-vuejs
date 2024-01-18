@@ -13,7 +13,7 @@ export default {
 
 <template lang="">
     <div class="ultracontainer pb-4">
-        <div class="justify-content-center d-flex mb-4">
+        <div class="justify-content-center d-flex mb-5">
             <div class="triangolo"></div>
         </div>
         
@@ -70,5 +70,15 @@ export default {
     ul{
         list-style: none;
         padding-left: 0;
+    }
+
+    a{
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    a:hover{
+        color: $my_black;
+        transition: color 0.3s ease;
     }
 </style>
