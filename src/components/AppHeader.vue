@@ -74,11 +74,11 @@ export default {
     <i class="fa-solid fa-book"></i> PAGES
   </button>
   <ul class="dropdown-menu">
-    <li><button class="dropdown-item" type="button">SEARCH RESULT</button></li>
-    <li><button class="dropdown-item" type="button">CATEGORY ARCHIVE</button></li>
-    <li><button class="dropdown-item" type="button">AUTHOR ARCHIVE</button></li>
-    <li><button class="dropdown-item" type="button">DATE ARCHIVE</button></li>
-    <li><button class="dropdown-item" type="button">ERRORE 404</button></li>
+    <li><button class="dropdown-item" type="button"> <i class="fa-solid me-2 fa-sm  fa-magnifying-glass"></i> <span class="text-drop"> SEARCH RESULT</span></button></li>
+    <li><button class="dropdown-item" type="button"> <i class="fa-solid me-2 fa-sm  fa-box-archive"></i> <span class="text-drop"> CATEGORY ARCHIVE</span></button></li>
+    <li><button class="dropdown-item" type="button"> <i class="fa-solid me-2 fa-sm  fa-circle-user"></i> <span class="text-drop"> AUTHOR ARCHIVE</span></button></li>
+    <li><button class="dropdown-item" type="button"> <i class="fa-solid me-2 fa-sm  fa-calendar-days"></i> <span class="text-drop"> DATE ARCHIVE</span></button></li>
+    <li><button class="dropdown-item" type="button"> <i class="fa-solid me-2 fa-sm  fa-bug"></i> <span class="text-drop"> ERRORE 404</span></button></li>
 
   </ul>
 </div>  </li>
@@ -146,4 +146,10 @@ export default {
             display: none;
         }
         
+        .text-drop{
+            font-size: 13px;
+            font-weight: 700;
+            color: rgba(0, 0, 0, 0.666);
+
+        }
 </style>
