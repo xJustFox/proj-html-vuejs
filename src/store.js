@@ -76,5 +76,43 @@ animeList: [
         genre: ['Fashion'],
         demo: 'demo',
     },
-]
+],
+footerData: [
+    {
+      title: 'GET STARTED',
+      links: [
+        { text: 'Resources', path: 'https://www.google.it/' },
+        { text: 'Tutorials', path: 'https://www.google.it/' },
+        { text: 'Examples', path: 'https://www.google.it/' },
+        { text: 'Docs', path: 'https://www.google.it/' },
+      ],
+    },
+    {
+        title: 'ABOUT',
+        links: [
+          { text: 'Stories', path: 'https://www.google.it/' },
+          { text: 'Community', path: 'https://www.google.it/' },
+          { text: 'Blog', path: 'https://www.google.it/' },
+          { text: 'Brand Assets', path: 'https://www.google.it/' },
+        ],
+      },
+      {
+        title: 'FEATURES',
+        links: [
+          { text: 'Overview', path: 'https://www.google.it/' },
+          { text: 'Design', path: 'https://www.google.it/' },
+          { text: 'Code', path: 'https://www.google.it/' },
+          { text: 'Collaborate', path: 'https://www.google.it/' },
+        ],
+      },
+      {
+        title: 'QUICK LINKS',
+        links: [
+          { text: 'Stories', path: 'https://www.google.it/' },
+          { text: 'Community', path: 'https://www.google.it/' },
+          { text: 'Blog', path: 'https://www.google.it/' },
+          { text: 'Brand Assets', path: 'https://www.google.it/' },
+        ],
+      },
+  ],
 });
