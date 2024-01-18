@@ -104,7 +104,9 @@ export default {
     <div class="banner-container">
         <div class="container-lg">
             <div class="row">
-                <div class="col-12"></div>
+                <div class="col-12">
+                    <img src="../../assets/page-banner-1.webp" alt="">
+                </div>
             </div>
         </div>
     </div>
@@ -152,7 +154,7 @@ h4 {
 }
 
 .left_box {
-    width: 750px;
+    width: 100%;
     height: 430px;
     position: relative;
 
@@ -183,5 +185,14 @@ h4 {
         left: 10px;
     }
 
+}
+
+.banner-container {
+    background-color: lightgrey;
+
+    img {
+        margin: 30px 0px;
+        width: 100%;
+    }
 }
 </style>
