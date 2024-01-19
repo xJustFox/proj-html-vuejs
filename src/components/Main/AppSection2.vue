@@ -171,7 +171,7 @@ export default {
 @use '../../style/partials/variables' as*;
 
 .grey_buttons {
-    background-color: #545454;
+    background-color: $my_black;
     color: $my_white;
     text-transform: uppercase;
     margin: 0 0.5em;
