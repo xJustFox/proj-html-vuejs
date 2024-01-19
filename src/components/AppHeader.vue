@@ -49,14 +49,14 @@ export default {
     <hr>
     <div class="container-lg ">
         <div class="row">
-        <div class="col-2 ">
-            <i class="fa-solid fa-bars fa-2xl"></i>
+        <div class="col-2 show">
+            <i class="fa-solid fa-bars fa-2xl "></i>
         </div>
         <div class="col-8">
             <ul class="d-flex justify-content-around list">
-                <li> <i class="fa-solid fa-house-chimney "></i> HOME</li>
-                <li> <i class="fa-solid fa-user"></i> ABOUT US</li>
-                <li class="show"> <i class="fa-solid fa-suitcase "></i> LIFESTYLE </li>
+                <li class="show"> <i class="fa-solid fa-house-chimney  "></i> HOME</li>
+                <li class="show"> <i class="fa-solid fa-user"></i> ABOUT US</li>
+                <li class="show"> <i class="fa-solid fa-suitcase "></i> LIFESTYLE <i class="fa-solid fa-angle-down"></i></li>
                 <div class="bg-grey none">
     <div class="container">
         <div class="row px-5 py-4">
@@ -99,7 +99,7 @@ export default {
         </div>
     </div>
     </div>
-                <li class="show"> <i class="fa-solid fa-book-open-reader"></i> STORIES</li>
+                <li class="show"> <i class="fa-solid fa-book-open-reader"></i> STORIES <i class="fa-solid fa-angle-down"></i></li>
                 <div class="bg-grey none">
     <div class="container">
         <div class="row px-5 py-4">
@@ -142,26 +142,26 @@ export default {
             </div>
             </div>
         </div>
-                <li><div class="dropdown">
-  <button class=" dropdown-toggle list" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-    <i class="fa-solid fa-book"></i> PAGES
+                <li class="show"><div class="dropdown">
+  <button class=" list show" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    <i class="fa-solid fa-book show"></i> PAGES
   </button>
-  <ul class="dropdown-menu">
-    <li><button class="dropdown-item" type="button"> <i class="fa-solid me-2 fa-sm  fa-magnifying-glass"></i> <span class="text-drop"> SEARCH RESULT</span></button></li>
-    <li><button class="dropdown-item" type="button"> <i class="fa-solid me-2 fa-sm  fa-box-archive"></i> <span class="text-drop"> CATEGORY ARCHIVE</span></button></li>
-    <li><button class="dropdown-item" type="button"> <i class="fa-solid me-2 fa-sm  fa-circle-user"></i> <span class="text-drop"> AUTHOR ARCHIVE</span></button></li>
-    <li><button class="dropdown-item" type="button"> <i class="fa-solid me-2 fa-sm  fa-calendar-days"></i> <span class="text-drop"> DATE ARCHIVE</span></button></li>
-    <li><button class="dropdown-item" type="button"> <i class="fa-solid me-2 fa-sm  fa-bug"></i> <span class="text-drop"> ERRORE 404</span></button></li>
+  <ul class="dropdown-menu show">
+    <li class="show"><button class="dropdown-item" type="button"> <i class="fa-solid me-2 fa-sm  fa-magnifying-glass show"></i> <span class="text-drop show"> SEARCH RESULT</span></button></li>
+    <li class="show"><button class="dropdown-item" type="button"> <i class="fa-solid me-2 fa-sm  fa-box-archive show"></i> <span class="text-drop show"> CATEGORY ARCHIVE</span></button></li>
+    <li class="show"><button class="dropdown-item" type="button"> <i class="fa-solid me-2 fa-sm  fa-circle-user show"></i> <span class="text-drop show"> AUTHOR ARCHIVE</span></button></li>
+    <li class="show"><button class="dropdown-item" type="button"> <i class="fa-solid me-2 fa-sm  fa-calendar-days show"></i> <span class="text-drop show"> DATE ARCHIVE</span></button></li>
+    <li class="show"><button class="dropdown-item" type="button"> <i class="fa-solid me-2 fa-sm  fa-bug show"></i> <span class="text-drop show"> ERRORE 404</span></button></li>
 
   </ul>
 </div>  </li>
             
-                <li> <i class="fa-solid fa-envelope"></i> CONTACT US</li>
+                <li class="show"> <i class="fa-solid fa-envelope"></i> CONTACT US</li>
 
             </ul>
        
         </div>
-        <div class="col-2 d-flex justify-content-end pt-3">
+        <div class="col-2 d-flex justify-content-end pt-3 show">
             <i class="fa-solid fa-magnifying-glass fa-2xl"></i>
         </div>
     </div></div>
