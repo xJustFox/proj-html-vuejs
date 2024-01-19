@@ -146,7 +146,7 @@ export default {
   <button class=" list show" type="button" data-bs-toggle="dropdown" aria-expanded="false">
     <i class="fa-solid fa-book show"></i> PAGES
   </button>
-  <ul class="dropdown-menu show">
+  <ul class="dropdown-menu">
     <li class="show"><button class="dropdown-item" type="button"> <i class="fa-solid me-2 fa-sm  fa-magnifying-glass show"></i> <span class="text-drop show"> SEARCH RESULT</span></button></li>
     <li class="show"><button class="dropdown-item" type="button"> <i class="fa-solid me-2 fa-sm  fa-box-archive show"></i> <span class="text-drop show"> CATEGORY ARCHIVE</span></button></li>
     <li class="show"><button class="dropdown-item" type="button"> <i class="fa-solid me-2 fa-sm  fa-circle-user show"></i> <span class="text-drop show"> AUTHOR ARCHIVE</span></button></li>
@@ -169,34 +169,41 @@ export default {
 
 <style lang="scss" scoped>
 @use '../style/partials/variables' as *;
-.pic{
+
+.pic {
     width: 43px;
 }
-.relative{
+
+.relative {
     position: relative;
 }
 
-.show:hover{
+.show:hover {
     color: $my_red;
 }
-.none{
+
+.none {
     display: none;
     position: absolute;
+    z-index: 1;
     top: 240px;
     left: 0;
     width: 100%;
 
 }
-.show:hover + .none{
+
+.show:hover+.none {
     display: flex;
 }
 
-.bg-red{
+.bg-red {
     background-color: $my_red;
 }
-.bg-grey{
+
+.bg-grey {
     background-color: $my_lightgray;
 }
+
 .news-up {
     background-color: $my_black;
     color: white;
@@ -257,12 +264,11 @@ export default {
 
 }
 
-.text-card{
+.text-card {
     text-align: center;
     font-weight: 600
 }
 
-.body-card{
+.body-card {
     border: none;
-}
-</style>
+}</style>
