@@ -67,7 +67,7 @@ export default {
             <ul class="d-flex justify-content-around list">
                 <li> <i class="fa-solid fa-house-chimney "></i> HOME</li>
                 <li> <i class="fa-solid fa-user"></i> ABOUT US</li>
-                <li> <i class="fa-solid fa-suitcase"></i> LIFESTYLE</li>
+                <li class="show"> <i class="fa-solid fa-suitcase "></i> LIFESTYLE</li>
                 <li> <i class="fa-solid fa-book-open-reader"></i> STORIES</li>
                 <li><div class="dropdown">
   <button class=" dropdown-toggle list" type="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -92,7 +92,7 @@ export default {
             <i class="fa-solid fa-magnifying-glass fa-2xl"></i>
         </div>
     </div></div>
-    <div class="bg-grey">
+    <div class="bg-grey none">
     <div class="container-lg  ">
         <div class="row px-5 py-4">
             <div class="col-3 ">
@@ -138,6 +138,13 @@ export default {
 
 <style lang="scss" scoped>
 @use '../style/partials/variables' as *;
+.none{
+    display: none;}
+.show:hover + .none{
+    display: flex;
+    color: red;
+}
+
 .bg-red{
     background-color: $my_red;
 }
