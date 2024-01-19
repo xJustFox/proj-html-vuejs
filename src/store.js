@@ -3,7 +3,7 @@ import { reactive } from "vue";
 export const store = reactive({
 animeList: [
     {
-        img: './assets/best-places.webp',
+        img: '/assets/best-places.webp',
         title: 'Place For A Road Trip',
         date: 'December 25, 2022',
         genre: ['Lifestyle','Stories','Travel'],
@@ -18,14 +18,14 @@ animeList: [
         demo: 'demo',
     },
     {
-        img: './assets/ideas-anime.webp',
+        img: '/assets/ideas-anime.webp',
         title: 'Live Ideas You Might Be Anime',
         date: 'December 26, 2022',
         genre: ['Culture','Stories'],
         demo: 'demo',
     },
     {
-        img: './assets/music-love.webp',
+        img: '/assets/music-love.webp',
         title: 'Music The Love Of My Life',
         date: 'December 25, 2022',
         time: '05:34',
@@ -33,14 +33,14 @@ animeList: [
         demo: 'demo',
     },
     {
-        img: './assets/photographers-mistakes.webp',
+        img: '/assets/photographers-mistakes.webp',
         title: "Beginner Photographer's Mistakes",
         date: 'December 26, 2022',
         genre: ['Fashion'],
         demo: 'demo',
     },
     {
-        img: './assets/rice-ball.webp',
+        img: '/assets/rice-ball.webp',
         title: "Hygenic Receipe To Prepare Rice",
         date: 'December 26, 2022',
         time: '05:37',
@@ -48,7 +48,7 @@ animeList: [
         demo: 'demo',
     },
     {
-        img: './assets/success-story.webp',
+        img: '/assets/success-story.webp',
         title: "The Best Success Stories",
         date: 'December 26, 2022',
         genre: ['Culture'],
@@ -69,7 +69,7 @@ animeList: [
         demo: 'demo',
     },
     {
-        img: './assets/winter.webp',
+        img: '/assets/winter.webp',
         title: "The Best Winter Outfits",
         date: 'December 26, 2022',
         time: '05:29',
