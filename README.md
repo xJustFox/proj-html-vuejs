@@ -1,7 +1,26 @@
-# Vue 3 + Vite
+# Ruoli:
+- Header: Pietro
+- Main (Section 1): Dody
+- Main (Section 2):  Igor
+- Main (Section 3): Cristian 
+- Footer: Asaf
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+# Fondamenta tecniche Progetto
+#### Framework utilizzati:
+- Vite => (https://vitejs.dev/);
+- Vue =>( https://it.vuejs.org/guide/introduction.html);
 
-## Recommended IDE Setup
+#### Pacchetti installati:
+- Bootstrap => (https://getbootstrap.com/);
+- Bootstrap Icon => (https://icons.getbootstrap.com/);
+- Vue3 Carousel =>(https://ismail9k.github.io/vue3-carousel/);
+- Font Awesome =>(https://fontawesome.com/);
+- Sass => (https://sass-lang.com/documentation/);
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+#### Container da utilizzare:
+- Container Viola: `container-fluid` (100%);
+- Container Giallo:  `container-lg` (≥992px);
+
+
+#### Mockup suddivisione sezioni:
+<img src="./src/assets/layout-mockup/layout-anime-box-section.png">
