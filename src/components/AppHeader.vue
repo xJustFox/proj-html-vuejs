@@ -82,9 +82,9 @@ export default {
             </div>
             <div class="col-3 ">
                 <div class="card border-0" style="width: 18rem;">
-  <img src="../assets/best-places-300x200.webp" class="card-img-top" alt="...">
+  <img src="../assets/best-places.webp" class="card-img-top" alt="...">
   <div class="card-body">
-    <p class="card-text text-card">Places For a Road Trip</p>
+    <p class="card-text text-card">Traveling Alone Is Awesome</p>
   </div>
 </div>
 
@@ -93,7 +93,7 @@ export default {
                 <div class="card border-0" style="width: 18rem;">
   <img src="../assets/music-love.webp" class="card-img-top" alt="...">
   <div class="card-body">
-    <p class="card-text text-card">Music The Love Of My Life</p>
+    <p class="card-text text-card">The Best Success Stories</p>
   </div>
 </div>
 
@@ -102,7 +102,7 @@ export default {
                 <div class="card border-0" style="width: 18rem;">
   <img src="../assets/anime-fashion.webp" class="card-img-top" alt="...">
   <div class="card-body body-card">
-    <p class="card-text text-card">Fashion Trend Now a Days</p>
+    <p class="card-text text-card">Places For A Road Trip</p>
   </div>
 </div>
 
@@ -110,7 +110,49 @@ export default {
         </div>
     </div>
     </div>
-                <li> <i class="fa-solid fa-book-open-reader"></i> STORIES</li>
+                <li class="show"> <i class="fa-solid fa-book-open-reader"></i> STORIES</li>
+                <div class="bg-grey none">
+    <div class="container">
+        <div class="row px-5 py-4">
+            <div class="col-3 ">
+                <div class="card border-0" style="width: 18rem;">
+  <img src="../assets/ideas-anime.webp" class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text text-card">Live Ideas You Might Be Anime</p>
+  </div>
+</div>
+
+            </div>
+            <div class="col-3 ">
+                <div class="card border-0" style="width: 18rem;">
+  <img src="../assets/travel-alone.webp" class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text text-card">Places For a Road Trip</p>
+  </div>
+</div>
+
+            </div>
+            <div class="col-3 ">
+                <div class="card border-0" style="width: 18rem;">
+  <img src="../assets/success-story.webp" class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text text-card">Music The Love Of My Life</p>
+  </div>
+</div>
+
+            </div>
+            <div class="col-3">
+                <div class="card border-0" style="width: 18rem;">
+  <img src="../assets/best-places.webp" class="card-img-top" alt="...">
+  <div class="card-body body-card">
+    <p class="card-text text-card">Fashion Trend Now a Days</p>
+  </div>
+</div>
+
+            </div>
+            </div>
+            </div>
+        </div>
                 <li><div class="dropdown">
   <button class=" dropdown-toggle list" type="button" data-bs-toggle="dropdown" aria-expanded="false">
     <i class="fa-solid fa-book"></i> PAGES
