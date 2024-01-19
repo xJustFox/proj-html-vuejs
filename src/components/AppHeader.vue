@@ -12,7 +12,7 @@ export default {
 </script>
 
 <template lang="">
-    <div class="bg-danger">
+    <div class="bg-red">
     <div class="container-lg ">
         <div class="row  p-2">
             <div class="col-6"> 
@@ -92,64 +92,124 @@ export default {
             <i class="fa-solid fa-magnifying-glass fa-2xl"></i>
         </div>
     </div></div>
+    <div class="bg-grey">
+    <div class="container-lg  ">
+        <div class="row px-5 py-4">
+            <div class="col-3 ">
+                <div class="card border-0" style="width: 18rem;">
+  <img src="../assets/visit-france.webp" class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text text-card">Reasons To Visit France</p>
+  </div>
+</div>
+
+            </div>
+            <div class="col-3 ">
+                <div class="card border-0" style="width: 18rem;">
+  <img src="../assets/best-places-300x200.webp" class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text text-card">Places For a Road Trip</p>
+  </div>
+</div>
+
+            </div>
+            <div class="col-3 ">
+                <div class="card border-0" style="width: 18rem;">
+  <img src="../assets/music-love.webp" class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text text-card">Music The Love Of My Life</p>
+  </div>
+</div>
+
+            </div>
+            <div class="col-3">
+                <div class="card border-0" style="width: 18rem;">
+  <img src="../assets/anime-fashion.webp" class="card-img-top" alt="...">
+  <div class="card-body body-card">
+    <p class="card-text text-card">Fashion Trend Now a Days</p>
+  </div>
+</div>
+
+            </div>
+        </div>
+    </div>
+    </div>
 </template>
 
 <style lang="scss" scoped>
-    .news-up{
-        background-color: gray;
-        color: white;
-        font-weight: bolder;
-        padding: 12px;
-    }
+@use '../style/partials/variables' as *;
+.bg-red{
+    background-color: $my_red;
+}
+.bg-grey{
+    background-color: $my_lightgray;
+}
+.news-up {
+    background-color: gray;
+    color: white;
+    font-weight: bolder;
+    padding: 12px;
+}
 
-    .news{
-        color: white;
-        font-weight: 650
-    }
+.news {
+    color: white;
+    font-weight: 650
+}
 
-    .svg{
-        color: white;
-        margin: 0px 20px;
-    }
+.svg {
+    color: white;
+    margin: 0px 20px;
+}
 
-    .social{
-        color: white;
-        
-    }
+.social {
+    color: white;
 
-    .social:hover{
-        color: rgba(0, 0, 0, 0.666);
-    font-weight: bold; 
+}
+
+.social:hover {
+    color: rgba(0, 0, 0, 0.666);
+    font-weight: bold;
     cursor: pointer;
-    }
+}
 
-    .list{
-        list-style: none;
-        color: rgba(0, 0, 0, 0.666);
-    font-weight: bold; 
+.list {
+    list-style: none;
+    color: rgba(0, 0, 0, 0.666);
+    font-weight: bold;
     cursor: pointer;
     border: none;
     background-color: white;
 
 }
-    
 
-    .news.p-1.X:hover {
+
+.news.p-1.X:hover {
     color: rgba(0, 0, 0, 0.666);
-    font-weight: bold; 
-    cursor: pointer;}
-    .dropdown:hover .dropdown-menu {
-            display: block;
-        }
+    font-weight: bold;
+    cursor: pointer;
+}
 
-        .dropdown-menu {
-            display: none;
-        }
-        
-        .text-drop{
-            font-size: 13px;
-            font-weight: 700;
-            color: rgba(0, 0, 0, 0.666);
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
 
-        }
+.dropdown-menu {
+    display: none;
+}
+
+.text-drop {
+    font-size: 13px;
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.666);
+
+}
+
+.text-card{
+    text-align: center;
+    font-weight: 600
+}
+
+.body-card{
+    border: none;
+}
 </style>
