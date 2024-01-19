@@ -12,7 +12,7 @@ export default {
 </script>
 
 <template lang="">
-    <div class="bg-red">
+    <div class="bg-red relative">
     <div class="container-lg ">
         <div class="row  p-2">
             <div class="col-6"> 
@@ -58,7 +58,7 @@ export default {
         </div>
     </div>
     <hr>
-    <div class="container-lg">
+    <div class="container-lg ">
         <div class="row">
         <div class="col-2 ">
             <i class="fa-solid fa-bars fa-2xl"></i>
@@ -67,33 +67,9 @@ export default {
             <ul class="d-flex justify-content-around list">
                 <li> <i class="fa-solid fa-house-chimney "></i> HOME</li>
                 <li> <i class="fa-solid fa-user"></i> ABOUT US</li>
-                <li class="show"> <i class="fa-solid fa-suitcase "></i> LIFESTYLE</li>
-                <li> <i class="fa-solid fa-book-open-reader"></i> STORIES</li>
-                <li><div class="dropdown">
-  <button class=" dropdown-toggle list" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-    <i class="fa-solid fa-book"></i> PAGES
-  </button>
-  <ul class="dropdown-menu">
-    <li><button class="dropdown-item" type="button"> <i class="fa-solid me-2 fa-sm  fa-magnifying-glass"></i> <span class="text-drop"> SEARCH RESULT</span></button></li>
-    <li><button class="dropdown-item" type="button"> <i class="fa-solid me-2 fa-sm  fa-box-archive"></i> <span class="text-drop"> CATEGORY ARCHIVE</span></button></li>
-    <li><button class="dropdown-item" type="button"> <i class="fa-solid me-2 fa-sm  fa-circle-user"></i> <span class="text-drop"> AUTHOR ARCHIVE</span></button></li>
-    <li><button class="dropdown-item" type="button"> <i class="fa-solid me-2 fa-sm  fa-calendar-days"></i> <span class="text-drop"> DATE ARCHIVE</span></button></li>
-    <li><button class="dropdown-item" type="button"> <i class="fa-solid me-2 fa-sm  fa-bug"></i> <span class="text-drop"> ERRORE 404</span></button></li>
-
-  </ul>
-</div>  </li>
-            
-                <li> <i class="fa-solid fa-envelope"></i> CONTACT US</li>
-
-            </ul>
-       
-        </div>
-        <div class="col-2 d-flex justify-content-end pt-3">
-            <i class="fa-solid fa-magnifying-glass fa-2xl"></i>
-        </div>
-    </div></div>
-    <div class="bg-grey none">
-    <div class="container-lg  ">
+                <li class="show"> <i class="fa-solid fa-suitcase "></i> LIFESTYLE </li>
+                <div class="bg-grey none">
+    <div class="container">
         <div class="row px-5 py-4">
             <div class="col-3 ">
                 <div class="card border-0" style="width: 18rem;">
@@ -134,15 +110,51 @@ export default {
         </div>
     </div>
     </div>
+                <li> <i class="fa-solid fa-book-open-reader"></i> STORIES</li>
+                <li><div class="dropdown">
+  <button class=" dropdown-toggle list" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    <i class="fa-solid fa-book"></i> PAGES
+  </button>
+  <ul class="dropdown-menu">
+    <li><button class="dropdown-item" type="button"> <i class="fa-solid me-2 fa-sm  fa-magnifying-glass"></i> <span class="text-drop"> SEARCH RESULT</span></button></li>
+    <li><button class="dropdown-item" type="button"> <i class="fa-solid me-2 fa-sm  fa-box-archive"></i> <span class="text-drop"> CATEGORY ARCHIVE</span></button></li>
+    <li><button class="dropdown-item" type="button"> <i class="fa-solid me-2 fa-sm  fa-circle-user"></i> <span class="text-drop"> AUTHOR ARCHIVE</span></button></li>
+    <li><button class="dropdown-item" type="button"> <i class="fa-solid me-2 fa-sm  fa-calendar-days"></i> <span class="text-drop"> DATE ARCHIVE</span></button></li>
+    <li><button class="dropdown-item" type="button"> <i class="fa-solid me-2 fa-sm  fa-bug"></i> <span class="text-drop"> ERRORE 404</span></button></li>
+
+  </ul>
+</div>  </li>
+            
+                <li> <i class="fa-solid fa-envelope"></i> CONTACT US</li>
+
+            </ul>
+       
+        </div>
+        <div class="col-2 d-flex justify-content-end pt-3">
+            <i class="fa-solid fa-magnifying-glass fa-2xl"></i>
+        </div>
+    </div></div>
 </template>
 
 <style lang="scss" scoped>
 @use '../style/partials/variables' as *;
+.relative{
+    position: relative;
+}
+
+.show:hover{
+    color: $my_red;
+}
 .none{
-    display: none;}
+    display: none;
+    position: absolute;
+    top: 240px;
+    left: 0;
+    width: 100%;
+
+}
 .show:hover + .none{
     display: flex;
-    color: red;
 }
 
 .bg-red{
