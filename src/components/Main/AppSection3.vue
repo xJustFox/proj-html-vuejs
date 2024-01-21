@@ -61,22 +61,27 @@ export default {
 
                 <div class="col-8 p-0">
                     <div class="my-height">
-                        <iframe width="100%" height="100%" :src="this.videoList[activeCheck].link" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe class="rounded-start" width="100%" height="100%" :src="this.videoList[activeCheck].link" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     </div>
                 </div>
                 
                 <div class="col-4 p-0">
                     <div class="my-height">
-                        <div class="contPlaylist">
-                            <div><i class="bi bi-play-fill"></i></div>
-                            <h5 class="m-3 text-white">Video Playlist</h5>
-                            <span></span>
+                        <div class="contPlaylist d-flex align-items-center">
+                            <div>
+                                <i class="bi bi-play-fill"></i>
+                            </div>
+                            <div>
+                                <div class="fw-bolder">Video Playlist</div>
+                                <div class="countNum fw-bolder">{{this.activeCheck + 1}}/{{this.videoList.length}}</div>
+                            </div>
+                            
                         </div>
                         <ul class="list-unstyled">
-                            <li class="d-flex align-items-center p-3" v-for="(video, index) in this.videoList" :key="index" @click="getActiveCheck(index)">
-                                <div class="btn btn-dark m-2">{{index + 1}}</div>
-                                <img class="px-2 " :src="video.img" alt="">
-                                <span>{{video.name}}</span>
+                            <li class="d-flex align-items-center py-3" v-for="(video, index) in this.videoList" :key="index" @click="getActiveCheck(index)">
+                                <div :class="activeCheck == index ? 'activeNum' : 'noActiveNum' " class="my-num">{{index + 1}}</div>
+                                <img class="rounded-4" :src="video.img" alt="">
+                                <div :class="activeCheck == index ? 'activeText' : '' ">{{video.name}}</div>
                             </li>
                         </ul>
                     </div>
@@ -84,48 +89,72 @@ export default {
             </div>
         </div>
     </main> 
-    <div class="container-fluid">
-        <div class="row my-5">
+    <div class="container-fluid py-5">
+        <div class="row">
             <div class="col-2">
-                <div class="text-center hover2 position-relative">
-                    <img src="/src/assets/anime-fashion.webp" class="rounded img-thumbnail border-light" alt="anime fashion">
-                    <h4 class="position-absolute top-50 start-50 translate-middle">FASHION</h4>
-                    <span class="position-absolute bottom-0 start-50 translate-middle-x p-4">3 POST</span>
+                <div class="box">
+                    <img src="/src/assets/anime-fashion.webp" class="backImage" alt="anime fashion">
+                    <div class="my-bg-red"></div>
+                    <div class="contentCard">
+                        <h4 class="titleCard">FASHION</h4>
+                        <span class="textCard">3 POST</span>
+                    </div>
+                    <div class="borderCard"></div>
                 </div>
             </div>
             <div class="col-2">
-                <div class="text-center hover2 position-relative">
-                    <img src="/src/assets/success-story.webp" class="rounded img-thumbnail border-light" alt="...">
-                    <h4 class="position-absolute top-50 start-50 translate-middle">CULTURE</h4>
-                    <span class="position-absolute bottom-0 start-50 translate-middle-x p-4">3 POST</span>
+                <div class="box">
+                    <img src="/src/assets/success-story.webp" class="backImage" alt="...">
+                    <div class="my-bg-red"></div>
+                    <div class="contentCard">
+                        <h4 class="titleCard">FASHION</h4>
+                        <span class="textCard">3 POST</span>
+                    </div>
+                    <div class="borderCard"></div>
                 </div>
             </div>
             <div class="col-2">
-                <div class="text-center hover2 position-relative">
-                    <img src="/src/assets/healthy-foods.webp" class="rounded img-thumbnail border-light" alt="...">
-                    <h4 class="position-absolute top-50 start-50 translate-middle">FOOD</h4>
-                    <span class="position-absolute bottom-0 start-50 translate-middle-x p-4">3 POST</span>
+                <div class="box">
+                    <img src="/src/assets/healthy-foods.webp" class="backImage" alt="...">
+                    <div class="my-bg-red"></div>
+                    <div class="contentCard">
+                        <h4 class="titleCard">FASHION</h4>
+                        <span class="textCard">3 POST</span>
+                    </div>
+                    <div class="borderCard"></div>
                 </div>
             </div>
             <div class="col-2">
-                <div class="text-center hover2 position-relative">
-                    <img src="/src/assets/visit-france.webp" class="rounded img-thumbnail border-light" alt="...">
-                    <h4 class="position-absolute top-50 start-50 translate-middle">LIFESTYLE</h4>
-                    <span class="position-absolute bottom-0 start-50 translate-middle-x p-4">3 POST</span>
+                <div class="box">
+                    <img src="/src/assets/visit-france.webp" class="backImage" alt="...">
+                    <div class="my-bg-red"></div>
+                    <div class="contentCard">
+                        <h4 class="titleCard">FASHION</h4>
+                        <span class="textCard">3 POST</span>
+                    </div>
+                    <div class="borderCard"></div>
                 </div>
             </div>
             <div class="col-2">
-                <div class="text-center hover2 position-relative">
-                    <img src="/src/assets/travel-alone.webp" class="rounded img-thumbnail border-light" alt="...">
-                    <h4 class="position-absolute top-50 start-50 translate-middle">STORIES</h4>
-                    <span class="position-absolute bottom-0 start-50 translate-middle-x p-4">3 POST</span>
+                <div class="box">
+                    <img src="/src/assets/travel-alone.webp" class="backImage" alt="...">
+                    <div class="my-bg-red"></div>
+                    <div class="contentCard">
+                        <h4 class="titleCard">FASHION</h4>
+                        <span class="textCard">3 POST</span>
+                    </div>
+                    <div class="borderCard"></div>
                 </div>
             </div>
             <div class="col-2">
-                <div class="content text-center overflow-hidden  hover2 position-relative">
-                    <img src="/src/assets/best-places.webp" class=" img-thumbnail border-light" alt="...">
-                    <h4 class="position-absolute top-50 start-50 translate-middle">TRAVEL</h4>
-                    <span class="middle position-absolute bottom-0 start-50 translate-middle-x p-4">3 POST</span>
+                <div class="box">
+                    <img src="/src/assets/best-places.webp" class="backImage" alt="...">
+                    <div class="my-bg-red"></div>
+                    <div class="contentCard">
+                        <h4 class="titleCard">FASHION</h4>
+                        <span class="textCard">3 POST</span>
+                    </div>
+                    <div class="borderCard"></div>
                 </div>
             </div>
         </div>
@@ -135,78 +164,148 @@ export default {
 <style lang="scss" scoped>
 @use '../../style/generals.scss' as*;
 
-.middle {
-  transition: .5s ease;
-  opacity: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  text-align: center;
-}
-.content:hover .middle {
-  opacity: 1;
-}
-    .contPlaylist{
+
+.contPlaylist{
+    color: white;
     height: 82px;
     background-color: #333333;
-}
+    border-radius: 0 5px 0 0;
+    }
     .my-height{
         height: 500px;
     }
-    img{
-        max-width: 100px;
-        backface-visibility: hidden;
+    .fa-play{
+        margin: 0  20px;
+        font-size: 25px;
     }
 
-    ul{
-        height: calc(100% - 82px);
-        overflow-y: scroll;
-        background-color: #F3F3F3;
+    .countNum{
+        font-size: small;
     }
 
-    ul li{
+ul{
+    height: calc(100% - 82px);
+    overflow-y: auto;
+    background-color: #F3F3F3;
+    border-radius: 0 0 5px 0;
+
+    .activeText{
+        color: #bf1d2e;
+    }
+
+    .activeNum{
+        background-color: #bf1d2e;
+    }
+
+    .noActiveNum{
+        background-color: #333333;
+    }
+    
+    li{
         border-bottom: 0.5px solid black;
-
+        
         &:hover{
             cursor: pointer;
-            background-color: lightgray;
+            color: #bf1d2e;
         }
-    }
-
-    img{
         
-        padding: 0;
-        background-color: rgba(0,0,0,0.5);
-        opacity: 0.7;
-    }
-    .hover2 img {
-    margin-left: 0px; 
-    transition: margin 0.35s ease;
-    z-index: 0;
-    }
-
-    .hover2 img:hover {
-    margin-right: -20px;
-    z-index: 1;
-    
-    background-color: rgb(191, 29, 45, 0.8);
-    
+        &:hover .my-num{
+            background-color: #bf1d2e;
+        }
         
-    
+        img{
+            max-width: 100px;
+            margin: 0 10px 0 5px;
+        }
+        .my-num{
+            color: white;
+            margin-left: 10px;
+            padding: 3px 10px;
+            border-radius: 5px;
+        }
+    }       
+}
+
+
+    .box{
+    width: 90%;
+    height: 200px;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+    border-radius: 3%;
+
+    .my-bg-red{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
     }
-    span{
+    .backImage{
+        position: absolute;
+        top: 50%;
+        left: 40%;
+        transform: translate(-50%, -50%);
+        height: calc(100% + 10px);
+        max-width: 150%;
+        border-radius: 20%;
+    }
+    .contentCard{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 35px;
         color: white;
+        border-radius: 20%;
     }
 
-    h4{
-        font-weight: 700;
-        color: white;
+    .textCard{
+        position: absolute;
+        left: 0;
+        color: transparent;
     }
-    .contPlaylist{
-    height: 82px;
-    background-color: #333333;
+
+    .borderCard{
+        width: 0%;
+        height: 80%;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.box:hover .borderCard,
+.contentCard:hover .borderCard{
+    cursor: pointer;
+    width: 80%;
+    left: 50%;
+    border: 3px solid white;
+    transition: 300ms;
+}
+
+.box:hover .textCard,
+.contentCard:hover .textCard{
+    cursor: pointer;
+    color: white;
+    left: 35%;
+    transition: 300ms;
+}
+
+.box:hover .backImage,
+.contentCard:hover .backImage{
+    cursor: pointer;
+    left: 60%;
+    transition: 300ms;
+}
+
+.box:hover .my-bg-red,
+.contentCard:hover .my-bg-red{
+    cursor: pointer;
+    transition: 300ms;
+    background-color: rgba(255, 0, 0, 0.2);
 }
 
 </style>
