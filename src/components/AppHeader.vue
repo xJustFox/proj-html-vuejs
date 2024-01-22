@@ -161,8 +161,8 @@ export default {
             </ul>
        
         </div>
-        <div class="col-2 d-flex justify-content-end pt-3 show">
-            <i class="fa-solid fa-magnifying-glass fa-2xl"></i>
+        <div class="col-2 d-flex justify-content-end show">
+            <i class="fa-solid fa-magnifying-glass"></i>
         </div>
     </div></div>
 </template>
@@ -192,7 +192,7 @@ export default {
     width: 100%;
 }
 
-.none:hover{
+.none:hover {
     display: flex;
 }
 
@@ -200,11 +200,13 @@ export default {
     display: flex;
 }
 
-.fa-bars:before, .fa-navicon:before {
+.fa-bars:before,
+.fa-navicon:before {
     font-size: x-large;
 }
 
-.fa-magnifying-glass:before, .fa-search:before {
+.fa-magnifying-glass:before,
+.fa-search:before {
     vertical-align: sub;
     font-size: x-large;
 }
