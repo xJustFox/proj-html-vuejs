@@ -147,7 +147,7 @@ export default {
                 </div>
             </div>
             <div class="col-12">
-                <Carousel ref="myCarousel"  :itemsToShow="3" :items-to-scroll="1" :wrap-around="true" :pauseAutoplayOnHover="true">
+                <Carousel ref="myCarousel"  :itemsToShow="3" :items-to-scroll="1":autoplay="5000" :wrap-around="true" :pauseAutoplayOnHover="true">
                     <Slide v-for="slide in store.animeList" :key="slide">
                         <div class="card_ carousel__item">
                             <img :src="slide.img" alt="">
