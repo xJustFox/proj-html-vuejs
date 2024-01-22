@@ -53,7 +53,7 @@ export default {
             <i class="fa-solid fa-bars fa-2xl "></i>
         </div>
         <div class="col-8">
-            <ul class="d-flex justify-content-around list">
+            <ul class="m-0 d-flex justify-content-around list">
                 <li class="show"> <i class="fa-solid fa-house-chimney  "></i> HOME</li>
                 <li class="show"> <i class="fa-solid fa-user"></i> ABOUT US</li>
                 <li class="show"> <i class="fa-solid fa-suitcase "></i> LIFESTYLE <i class="fa-solid fa-angle-down"></i></li>
@@ -180,20 +180,33 @@ export default {
 
 .show:hover {
     color: $my_red;
+    cursor: pointer;
 }
 
 .none {
     display: none;
     position: absolute;
     z-index: 1;
-    top: 240px;
+    top: 222px;
     left: 0;
     width: 100%;
+}
 
+.none:hover{
+    display: flex;
 }
 
 .show:hover+.none {
     display: flex;
+}
+
+.fa-bars:before, .fa-navicon:before {
+    font-size: x-large;
+}
+
+.fa-magnifying-glass:before, .fa-search:before {
+    vertical-align: sub;
+    font-size: x-large;
 }
 
 .bg-red {
