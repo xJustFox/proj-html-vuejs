@@ -56,7 +56,7 @@ export default {
 <template lang="">
     
     <div>
-        <div class="container-lg">
+        <div class="container-lg py-3">
             <div class="row justify-content-center flex-wrap">
 
                 <div class="col-8 p-0">
@@ -109,7 +109,7 @@ export default {
                     <div class="my-bg-red"></div>
                     <div class="card-bg"></div>
                     <div class="contentCard">
-                        <h4 class="titleCard">FASHION</h4>
+                        <h4 class="titleCard">CULTURE</h4>
                         <span class="textCard">3 POST</span>
                     </div>
                     <div class="borderCard"></div>
@@ -121,7 +121,7 @@ export default {
                     <div class="my-bg-red"></div>
                     <div class="card-bg"></div>
                     <div class="contentCard">
-                        <h4 class="titleCard">FASHION</h4>
+                        <h4 class="titleCard">FOOD</h4>
                         <span class="textCard">3 POST</span>
                     </div>
                     <div class="borderCard"></div>
@@ -133,8 +133,8 @@ export default {
                     <div class="my-bg-red"></div>
                     <div class="card-bg"></div>
                     <div class="contentCard">
-                        <h4 class="titleCard">FASHION</h4>
-                        <span class="textCard">3 POST</span>
+                        <h4 class="titleCard">LIFESYLE</h4>
+                        <span class="textCard">4 POST</span>
                     </div>
                     <div class="borderCard"></div>
                 </div>
@@ -145,8 +145,8 @@ export default {
                     <div class="my-bg-red"></div>
                     <div class="card-bg"></div>
                     <div class="contentCard">
-                        <h4 class="titleCard">FASHION</h4>
-                        <span class="textCard">3 POST</span>
+                        <h4 class="titleCard">STORIES</h4>
+                        <span class="textCard">4 POST</span>
                     </div>
                     <div class="borderCard"></div>
                 </div>
@@ -157,7 +157,7 @@ export default {
                     <div class="my-bg-red"></div>
                     <div class="card-bg"></div>
                     <div class="contentCard">
-                        <h4 class="titleCard">FASHION</h4>
+                        <h4 class="titleCard">TRAVEL</h4>
                         <span class="textCard">3 POST</span>
                     </div>
                     <div class="borderCard"></div>
@@ -324,5 +324,5 @@ ul {
 .contentCard:hover .my-bg-red {
     cursor: pointer;
     transition: 300ms;
-    background-color: rgba(255, 0, 0, 0.2);
+    background-color: rgba(255, 0, 0, 0.629);
 }</style>
